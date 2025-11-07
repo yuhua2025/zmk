@@ -64,7 +64,7 @@ pipx runpip west install -r zephyr/scripts/requirements-base.txt
 
 ```bash
 cd ~/zmk/app
-west build -d build -p -b nrfmicro_13 -- -DSHIELD=keyboard -DCONFIG_PICOLIBC=n -DCONFIG_NEWLIB_LIBC=y -DCONFIG_NEWLIB_LIBC_NANO=y
+west build -d build -p -b nrfmicro_13 -- -DSHIELD=k30 -DCONFIG_PICOLIBC=n -DCONFIG_NEWLIB_LIBC=y -DCONFIG_NEWLIB_LIBC_NANO=y
 ```
 
 > 🧩 `nrfmicro_13` 是你的键盘主控板型号，
@@ -103,5 +103,6 @@ west flash -d build --board nrfmicro_13
 ```
 
 > ⚠️ 若使用 UF2 bootloader，此命令无效，请用上面的 `cp` 方式。
+
 
 ---
